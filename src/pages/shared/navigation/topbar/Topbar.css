@@ -1,0 +1,27 @@
+.topbar-wrapper{
+  border-bottom: 1px solid #e5e5e5;
+}
+.topbar{
+  height: 38px;
+}
+.sub-text{
+  color: #222;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+}
+
+.icon-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+.icon-box:hover{
+  color: blue;
+}
+

@@ -1,0 +1,108 @@
+.search-input{
+  border: 1px solid #e5e5e5;
+  padding: 6px 16px ;
+}
+.search-input > input {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.search-input > input::placeholder {
+  color: #aba9a9;
+  font-size: 14px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+
+.search-icon{
+  color: #121212;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.icon-area-call{
+  height: auto;
+  width:auto;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 10px;
+}
+.icon-area{
+  height: auto;
+  width:auto;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: .3s linear;
+  padding: 10px;
+}
+.icon-area-social{
+  height: auto;
+  width:auto;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: .3s linear;
+  padding: 8px;
+}
+.badge{
+  position: relative;
+}
+.couter-badge{
+  position: absolute;
+  background:#207AF4;
+  color: #FFF;
+  border-radius: 4px;
+  padding: 0px 2px;
+  right: 7px;
+  top: -9px;
+  font-size: 12px;
+}
+.icon-area:hover{
+  background: #207AF4;
+  color: #fff;
+}
+.icon-area-social:hover{
+  background: #207AF4;
+  color: #fff;
+}
+
+.contact-des >  span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #081828;
+}
+.contact-des >  p {
+  color: #888;
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+}
+
+.wishlist{
+  margin-left: 16px;
+}
+
+.cart-amount h3 {
+  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+}
+.cart-amount p {
+  font-weight: normal;
+  font-family: "Fira Sans", sans-serif;
+}
+.cart-amount:hover{
+  color: #207AF4;
+  transition: .3s linear;
+}

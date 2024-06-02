@@ -1,0 +1,17 @@
+.nav-wrapper{
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  height: 60px;
+}
+.link-btn{
+  margin: 0px 10px;
+  text-transform: uppercase;
+}
+
+.flw-text{
+  font-size: 15px;
+  font-weight: 600;
+  color: #081828;
+  margin-right: 16px;
+  margin-left: 16px;
+}
