@@ -7,7 +7,7 @@ import { FiShoppingCart } from "react-icons/fi";
 const Midbar = () => {
   return (
     <div className="lg:container px-5 md:mx-auto grid md:grid-cols-12 gap-5 py-5 sm:mt-2  items-center">
-      <div className="col-span-2  ">
+      <div className="col-span-2">
         <img width="auto" src={logo} alt="website logo" />
       </div>
       <div className="search-input flex items-center col-span-6 ">
