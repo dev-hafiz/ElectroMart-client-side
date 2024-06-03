@@ -1,0 +1,21 @@
+.email-input{
+margin-top: 6px;
+border: none;
+outline: none;
+background: #fff;
+padding: 10px 30px;
+border-radius: 4px;
+margin-right: 8px;
+}
+.email-input::placeholder{
+  color: rgb(134, 134, 134);
+  font-size: 16px;
+}
+.subscribe-btn{
+  background: #0167F3;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 30px;
+}
