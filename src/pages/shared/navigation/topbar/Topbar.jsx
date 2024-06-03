@@ -19,7 +19,7 @@ const Topbar = () => {
             <MdOutlineNotListedLocation /> <span>Need Help</span>
           </div>
           <div>
-            <Link to="/register" className="icon-box">
+            <Link to="/login" className="icon-box">
               <AiOutlineUser /> <span>Sign In / Register</span>
             </Link>
           </div>

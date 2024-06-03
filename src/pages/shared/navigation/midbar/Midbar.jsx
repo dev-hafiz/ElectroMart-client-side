@@ -3,12 +3,15 @@ import logo from "../../../../assets/images/logo/LOGO.png";
 import { BsSearch, BsTelephone } from "react-icons/bs";
 import { GoHeart } from "react-icons/go";
 import { FiShoppingCart } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Midbar = () => {
   return (
     <div className="lg:container px-5 md:mx-auto grid md:grid-cols-12 gap-5 py-5 sm:mt-2  items-center">
       <div className="col-span-2">
-        <img width="auto" src={logo} alt="website logo" />
+        <Link to="/">
+          <img width="auto" src={logo} alt="website logo" />
+        </Link>
       </div>
       <div className="search-input flex items-center col-span-6 ">
         <input placeholder="Search your product..." />
