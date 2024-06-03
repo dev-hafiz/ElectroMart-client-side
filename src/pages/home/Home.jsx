@@ -7,11 +7,11 @@ import TopCategories from "../../components/home-compo/top-categories/TopCategor
 const Home = () => {
   return (
     <div className="lg:container px-5  md:mx-auto">
-      <div className=" grid md:grid-cols-12 gap-4 mt-6">
-        <div className=" col-span-6 md:col-span-8  ">
+      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-12">
+        <div className=" col-span-8 md:col-span-8 ">
           <SwiperSlider />
         </div>
-        <div className=" col-span-6 md:col-span-4">
+        <div className=" col-span-4 md:col-span-4">
           <div className="headphone-box">
             <div>
               <span className="headPhn-subText">New line required</span>
