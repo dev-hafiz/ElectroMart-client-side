@@ -1,0 +1,103 @@
+.top-box{
+  border: 1px solid #e5e5e5;
+}
+.title-text-login{
+  margin: 0px 0px 0.35em;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+  color: #000000;
+  padding: 16px 16px 0px 16px;
+}
+.toggle-text-login{
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02875em;
+  font-family: "Fira Sans", sans-serif;
+  color: #000000;
+  padding: 16px 16px 0px 16px;
+}
+
+.right-text{
+  margin: 16px 0px 20px 0px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.recomend-text{
+  margin: 0px 0px 0.35em;
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 24px;
+  margin-bottom: -2px;
+}
+
+.sub-text{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+  
+}
+
+.btn-text-login{
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02875em;
+  font-family: "Fira Sans", sans-serif;
+  color: #F7A817;
+  margin-left: 8px;
+}
+
+.fa-btn-login{
+  font-size: 30px;
+  border-right: 1px solid #F7A817;
+  padding-right: 10px;
+}
+
+.social-btn-login{
+  display: flex;
+  align-items: center;
+  background: #131921;
+  color: #F7A817;
+  margin: 10px 0px 0px 0px;
+  padding: 6px 16px 6px 10px;
+  border-radius: 2px;
+  transition: .3s linear;
+  width: 100%;
+  height: auto;
+  transition: .3s linear;
+}
+.social-btn-login:hover{
+  background: #0A0D11;
+}
+
+.submit-btn-login{
+  background: #131921;
+  color: #F7A817;
+  margin: 30px 0px 30px 0px;
+  padding: 9px 18px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.02875em;
+  border-radius: 2px;
+  transition: .3s linear;
+}
+.submit-btn-login:hover{
+  background: #000;
+  cursor: pointer;
+}

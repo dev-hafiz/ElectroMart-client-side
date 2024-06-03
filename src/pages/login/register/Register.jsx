@@ -2,16 +2,29 @@ import "./Register.css";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Register = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const image_url = form.photoUrl.value;
+    console.log(name, email, password, image_url);
+  };
+
   return (
     <div className="h-screen  flex justify-center items-center">
       <div className="register-area w-2/4">
-        <div className="top-box flex justify-between items-center">
+        <div className="flex justify-between items-center">
           <h3 className="title-text">Register</h3>
           <p className="toggle-text">
             Already Have an account?{" "}
-            <span className="cursor-pointer text-blue-400">Login Now</span>
+            <Link to="/login">
+              <span className="cursor-pointer font-bold">Login Now</span>
+            </Link>
           </p>
         </div>
         <div>
@@ -40,44 +53,44 @@ const Register = () => {
           </div>
           <p className="sign-text">or, You can register yourself...</p>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-2 input-area gap-2 mb-4">
               <div>
                 <input
-                  className="input-field"
                   type="text"
+                  name="name"
+                  className="input-field"
                   placeholder="Enter your name"
                   required
-                  name="name"
                 />
               </div>
               <div>
                 <input
-                  className="input-field"
                   type="email"
+                  name="email"
+                  className="input-field"
                   placeholder="Enter your email "
                   required
-                  name="email"
                 />
               </div>
             </div>
             <div className="grid md:grid-cols-2 input-area gap-2 ">
               <div>
                 <input
-                  className="input-field"
                   type="password"
+                  name="password"
+                  className="input-field"
                   placeholder="Enter password "
                   required
-                  name="password"
                 />
               </div>
               <div>
                 <input
-                  className="input-field"
                   type="url"
+                  name="photoUrl"
+                  className="input-field"
                   placeholder="Photo URL "
                   required
-                  name="photo_url"
                 />
               </div>
             </div>

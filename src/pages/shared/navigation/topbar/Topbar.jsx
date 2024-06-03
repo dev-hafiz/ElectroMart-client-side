@@ -2,6 +2,7 @@ import "./Topbar.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineNotListedLocation } from "react-icons/md";
 import { AiOutlineUser } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
   return (
@@ -17,8 +18,10 @@ const Topbar = () => {
           <div className="icon-box">
             <MdOutlineNotListedLocation /> <span>Need Help</span>
           </div>
-          <div className="icon-box">
-            <AiOutlineUser /> <span>Sign In / Register</span>
+          <div>
+            <Link to="/register" className="icon-box">
+              <AiOutlineUser /> <span>Sign In / Register</span>
+            </Link>
           </div>
         </div>
       </div>
