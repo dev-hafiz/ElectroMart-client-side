@@ -1,0 +1,46 @@
+.headphone-img{
+  width: 140px;
+}
+.watch-img{
+  width: 140px;
+}
+.headphone-box{
+  display: flex;
+  align-items: center;
+  background: #f2f701;
+  justify-content: space-between;
+  padding: 7px 20px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+.headPhn-title{
+  font-size: 24px;
+  font-weight: 500;
+}
+.headPhn-subText{
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  font-family: "Fira Sans", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.headPhn-price{
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+}
+
+.deal-box{
+  display: flex;
+  align-items: center;
+  background: #002A6F;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  color: #ffff;
+}

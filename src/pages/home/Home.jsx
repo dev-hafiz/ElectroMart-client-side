@@ -1,5 +1,7 @@
 import SwiperSlider from "../../components/home-compo/SwiperSlider";
-
+import headphone from "../../assets/images/banner/banner3.png";
+import watch from "../../assets/images/banner/banner4.png";
+import "./Home.css";
 const Home = () => {
   return (
     <div className="lg:container px-5  md:mx-auto">
@@ -7,7 +9,28 @@ const Home = () => {
         <div className=" col-span-6 md:col-span-8  ">
           <SwiperSlider />
         </div>
-        <div className="bg-gray-300 col-span-6 md:col-span-4 p-4">right</div>
+        <div className=" col-span-6 md:col-span-4">
+          <div className="headphone-box">
+            <div>
+              <span className="headPhn-subText">New line required</span>
+              <h3 className="headPhn-title">Tribit XFree Tune</h3>
+              <p className="headPhn-price">$259.99</p>
+            </div>
+            <div>
+              <img src={headphone} className="headphone-img" alt="headphone" />
+            </div>
+          </div>
+          <div className="deal-box">
+            <div>
+              <span className="headPhn-subText">New line required</span>
+              <h3 className="headPhn-title">Tribit XFree Tune</h3>
+              <p className="headPhn-price">$259.99</p>
+            </div>
+            <div>
+              <img src={watch} className="headphone-img" alt="headphone" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
