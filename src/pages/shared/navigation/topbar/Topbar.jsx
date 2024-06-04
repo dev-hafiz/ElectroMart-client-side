@@ -7,6 +7,7 @@ import useAuth from "../../../../hooks/useAuth";
 
 const Topbar = () => {
   const { user, logOut } = useAuth();
+  console.log("User From Topbr Nav -->", user);
   return (
     <div className="topbar-wrapper">
       <div className="topbar lg:container px-5 md:mx-auto grid md:grid-cols-3 gap-4">

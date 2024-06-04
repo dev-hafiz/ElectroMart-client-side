@@ -2,17 +2,31 @@ import "./Register.css";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Register = () => {
+  const { registerWithEmailAndPassword, user } = useAuth();
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    const image_url = form.photoUrl.value;
-    console.log(name, email, password, image_url);
+    const photoUrl = form.photoUrl.value;
+    // console.log(name, email, password, photoUrl);
+    registerWithEmailAndPassword(
+      email,
+      password,
+      name,
+      photoUrl,
+      location,
+      navigate
+    );
   };
 
   return (

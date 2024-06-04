@@ -26,19 +26,18 @@
 }
 
 .logout-btn{
-    color: #000;
     border: 0;
     padding: 4px 20px;
     font-size: 14px;
-    border-radius: 8px;
-    font-weight: 300;
+    border-radius: 4px;
+    font-weight: 400;
     transition: .3a linear;
     margin-bottom: 2px;
-    border: 1px solid #cfcfcf;
-    background: #e5e5e5;
+    background: #002A6E;
+    color: #fff;
+
 }
 .logout-btn:hover{
-  background: #002A6E;
-  color: #fff;
+  background: #262D4B;
   transition: .3s linear;
 }

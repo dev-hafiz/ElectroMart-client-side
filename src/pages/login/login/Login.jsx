@@ -6,8 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const Login = () => {
-  const { signInWithGoogle, user } = useAuth();
-  console.log("User From Login -->", user);
+  const { signInWithGoogle } = useAuth();
 
   const location = useLocation();
   const navigate = useNavigate();
