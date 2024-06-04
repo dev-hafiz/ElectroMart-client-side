@@ -89,7 +89,7 @@ const AllProducts = () => {
                       </button>
                     </td>
                     <td>
-                      <Link to={`/dashboard/all-products/edit/${product?.id}`}>
+                      <Link to={`/dashboard/allProduct/edit/${product?._id}`}>
                         <button className="btn bg-green-600 text-white btn-ghost btn-xs px-5 py-2 rounded-md">
                           Edit
                         </button>

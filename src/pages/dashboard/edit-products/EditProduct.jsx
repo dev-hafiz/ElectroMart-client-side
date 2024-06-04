@@ -1,7 +1,20 @@
-import toast from "react-hot-toast";
-import "./AddProduct.css";
+import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const AddProduct = () => {
+const EditProduct = () => {
+  const product = useLoaderData();
+  // console.log(product);
+
+  const [title, setTitle] = useState(product.title);
+  const [image, setImage] = useState(product.image);
+  const [price, setPrice] = useState(product.price);
+  const [delPrice, setDelPrice] = useState(product.del_price);
+  const [ratings, setRatings] = useState(product.ratings);
+  const [offSale, setOffSell] = useState(product.off_sale);
+  const [category, setCategory] = useState(product.category);
+  const [company, setCompany] = useState(product.company);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -26,10 +39,10 @@ const AddProduct = () => {
       category,
       company,
     };
-    console.log(data);
+    // console.log(data);
 
-    await fetch("http://localhost:5000/products", {
-      method: "POST",
+    await fetch(`http://localhost:5000/products/${product._id}`, {
+      method: "PATCH",
       headers: {
         "Content-type": "application/json",
       },
@@ -37,18 +50,17 @@ const AddProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
-        if (data.acknowledged) {
-          toast.success("Product Added Successfully");
-        }
-
-        form.reset();
+        Swal.fire({
+          title: "Product Edited Successfully!",
+          text: `Your product ${data.title} has been Edited.`,
+          icon: "success",
+        });
       });
   };
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-center">Add a Product</h1>
+      <h1 className="text-5xl font-bold text-center">Edit Products</h1>
 
       <div className="my-16">
         {/* form start  */}
@@ -56,6 +68,7 @@ const AddProduct = () => {
         <form onSubmit={handleSubmit} className="w-8/12 mx-auto ">
           <div className="relative z-0 w-full mb-5 group">
             <input
+              defaultValue={title}
               type="text"
               name="title"
               placeholder="Title"
@@ -66,6 +79,7 @@ const AddProduct = () => {
 
           <div className="relative z-0 w-full mb-5 group">
             <input
+              defaultValue={company}
               type="text"
               name="company"
               placeholder="Company"
@@ -75,6 +89,7 @@ const AddProduct = () => {
           <div className="grid md:grid-cols-2 md:gap-6">
             <div className="relative z-0 w-full mb-5 group">
               <input
+                defaultValue={price}
                 type="number"
                 name="price"
                 placeholder="Price"
@@ -83,6 +98,7 @@ const AddProduct = () => {
             </div>
             <div className="relative z-0 w-full mb-5 group">
               <input
+                defaultValue={delPrice}
                 type="text"
                 name="del_price"
                 placeholder="Del Price"
@@ -93,6 +109,7 @@ const AddProduct = () => {
           <div className="grid md:grid-cols-2 md:gap-6">
             <div className="relative z-0 w-full mb-5 group">
               <input
+                defaultValue={ratings}
                 type="number"
                 name="ratings"
                 placeholder="Ratings"
@@ -101,6 +118,7 @@ const AddProduct = () => {
             </div>
             <div className="relative z-0 w-full mb-5 group">
               <input
+                defaultValue={offSale}
                 type="text"
                 name="off_sale"
                 placeholder="Off Sale"
@@ -111,6 +129,7 @@ const AddProduct = () => {
 
           <div className="relative z-0 w-full mb-5 group">
             <input
+              defaultValue={category}
               type="text"
               name="category"
               placeholder="Category"
@@ -119,6 +138,7 @@ const AddProduct = () => {
           </div>
           <div className="relative z-0 w-full mb-5 group">
             <input
+              defaultValue={image}
               type="text"
               name="image_url"
               placeholder="Image URL"
@@ -136,4 +156,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default EditProduct;
