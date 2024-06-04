@@ -22,16 +22,16 @@ const Topbar = () => {
           <div className="icon-box">
             <MdOutlineNotListedLocation /> <span>Need Help</span>
           </div>
-
-          <div className="icon-box">
-            <Link
-              to="/dashboard"
-              style={{ display: "flex", alignItems: "center" }}
-            >
-              <RxDashboard /> <span className="ml-1">Dashboard</span>
-            </Link>
-          </div>
-
+          {user?.uid && (
+            <div className="icon-box">
+              <Link
+                to="/dashboard"
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <RxDashboard /> <span className="ml-1">Dashboard</span>
+              </Link>
+            </div>
+          )}
           <div>
             {user?.uid ? (
               <>

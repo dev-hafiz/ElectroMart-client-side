@@ -1,10 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
-// import "../components/dashboard/Dashboard.css";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { IoHomeOutline } from "react-icons/io5";
 import { LiaProductHunt } from "react-icons/lia";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { GrHomeOption } from "react-icons/gr";
+import "../pages/dashboard/DashboardLayout.css";
+import { LuUser2 } from "react-icons/lu";
 
 const DashboardLayout = () => {
   return (
@@ -17,27 +18,35 @@ const DashboardLayout = () => {
         <ul>
           <li>
             <button className="dashboard-link">
-              <GrHomeOption className="link-icon" />
-              <Link to={""}>Dashboard</Link>
+              <LuUser2 className="link-icon" />
+              <Link to={""} className="lnik-text">
+                User Profile
+              </Link>
             </button>
           </li>
           <li>
             <button className="dashboard-link">
               <LiaProductHunt className="link-icon" />
-              <Link to={"all-products"}>All Products</Link>
+              <Link to={"allProducts"} className="lnik-text">
+                All Products
+              </Link>
             </button>
           </li>
           <li>
             <button className="dashboard-link">
               <IoIosAddCircleOutline className="link-icon" />
-              <Link to={"add-products"}>Add Product</Link>
+              <Link to={"addProduct"} className="lnik-text">
+                Add Product
+              </Link>
             </button>
           </li>
 
           <li>
             <button className="dashboard-link">
               <IoHomeOutline className="link-icon" />
-              <Link to={"/"}>Home</Link>
+              <Link to={"/"} className="lnik-text">
+                Home
+              </Link>
             </button>
           </li>
         </ul>
