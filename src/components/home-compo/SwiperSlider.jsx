@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import banner2 from "../../../src/assets/images/banner/banner2.png";
+import { Link } from "react-router-dom";
 
 const SwiperContainer = styled.div`
   .swiper-button-next,
@@ -44,7 +45,9 @@ const SwiperSlider = () => {
                 The Xbox One S boasts a redesigned controller and seamless PC
                 cross-play compatibility as standout features.
               </p>
-              <button className="shop-btn">Shopping Now </button>
+              <Link to="/shop">
+                <button className="shop-btn">Shopping Now </button>{" "}
+              </Link>
             </div>
             <div className="right-area  col-span-12 md:col-span-6 ">
               <img src={banner2} alt="banner" className="slider-img" />

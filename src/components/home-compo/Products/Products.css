@@ -6,6 +6,9 @@
 .top-product-box {
   padding-bottom: 16px;
   margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
 }
 .top-product-heading{
   font-family: "Fira Sans", sans-serif;
@@ -18,4 +21,20 @@
   font-size: 15px;
   margin-bottom: 10px;
   margin-top: 8px;
+}
+
+.view-btn{
+  border: 0;
+    padding: 4px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: 400;
+    transition: .3a linear;
+    margin-bottom: 2px;
+    background: #081828;
+    color: #fff;
+}
+.view-btn:hover{
+  background: #374151;
+  transition: .3s linear;
 }
