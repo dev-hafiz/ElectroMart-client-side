@@ -42,13 +42,16 @@ const EditProduct = () => {
     };
     // console.log(data);
 
-    await fetch(`http://localhost:5000/products/${product._id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
+    await fetch(
+      `https://electro-mart-server-side.vercel.app/products/${product._id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         Swal.fire({

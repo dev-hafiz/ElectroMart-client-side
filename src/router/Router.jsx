@@ -35,7 +35,8 @@ export const router = createBrowserRouter([
       {
         path: "shop",
         element: <Shop />,
-        loader: () => fetch("http://localhost:5000/products"),
+        loader: () =>
+          fetch("https://electro-mart-server-side.vercel.app/products"),
       },
     ],
   },
@@ -84,7 +85,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://electro-mart-server-side.vercel.app/products/${params.id}`
+          ),
       },
     ],
   },

@@ -7,7 +7,7 @@ const AllProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://electro-mart-server-side.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -25,7 +25,7 @@ const AllProducts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`https://electro-mart-server-side.vercel.app/products/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
