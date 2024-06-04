@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useEffect, useState } from "react";
 import {
   GoogleAuthProvider,
@@ -10,8 +11,8 @@ import {
   updateProfile,
 } from "firebase/auth";
 import initializeAuthentication from "../firebase/firebase.init";
+import toast from "react-hot-toast";
 // import axios from "axios";
-import Swal from "sweetalert2";
 
 initializeAuthentication();
 
@@ -36,6 +37,7 @@ const useFirebase = () => {
         // saveUserInDb(user?.email, user?.displayName, "POST");
         navigate(from, { replace: true });
         setUser(user);
+        toast.success("Account Created Successfully!");
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -65,12 +67,7 @@ const useFirebase = () => {
         navigate(from, { replace: true });
         updateUserProfile(name, photoUrl);
         setUser(user);
-        Swal.fire({
-          icon: "success",
-          title: `${name}, your account created successfully!`,
-          showConfirmButton: false,
-          timer: 2000,
-        });
+        toast.success("Account Created Successfully!");
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -100,6 +97,7 @@ const useFirebase = () => {
         const user = result.user;
         navigate(from, { replace: true });
         setUser(user);
+        toast.success("Account Created Successfully!");
       })
       .catch((error) => {
         const errorMessage = error.message;

@@ -6,7 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const Login = () => {
-  const { signInWithGoogle } = useAuth();
+  const { signInWithGoogle, logInWithEmailPassword } = useAuth();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    logInWithEmailPassword(email, password, location, navigate);
   };
 
   const handleGoogleLogin = () => {

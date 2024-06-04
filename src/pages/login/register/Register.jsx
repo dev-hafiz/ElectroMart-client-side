@@ -6,7 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const Register = () => {
-  const { registerWithEmailAndPassword, user } = useAuth();
+  const { registerWithEmailAndPassword, signInWithGoogle } = useAuth();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -29,6 +29,10 @@ const Register = () => {
     );
   };
 
+  const handleGoogleLogin = () => {
+    signInWithGoogle(location, navigate);
+  };
+
   return (
     <div className="h-screen  flex justify-center items-center">
       <div className="register-area w-2/4">
@@ -46,7 +50,7 @@ const Register = () => {
             <span>You can either...</span>
             <div className="grid md:grid-cols-12  gap-2">
               <div className="col-span-4">
-                <button className="social-btn">
+                <button onClick={handleGoogleLogin} className="social-btn">
                   <FaGoogle className="fa-btn" />
                   <span className="btn-text">Sign In By Google</span>
                 </button>
