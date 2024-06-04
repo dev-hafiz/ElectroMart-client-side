@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 const ProductCard = ({ product }) => {
-  const { title, img, del_price, price, ratings, off_sale } = product || {};
+  const { title, image, del_price, price, ratings, off_sale } = product || {};
   return (
     <div className="relative ml-3 flex w-full max-w-xs flex-col overflow-hidden rounded-md border border-[#f1f1f1] bg-white ">
       <Link
         className="relative mx-3 mt-3 flex h-50 overflow-hidden rounded-md"
         to="/"
       >
-        <img className="object-cover" src={img} alt="product image" />
+        <img className="object-cover" src={image} alt="product image" />
         <span className="absolute top-1 left-1 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
           {off_sale} OFF
         </span>

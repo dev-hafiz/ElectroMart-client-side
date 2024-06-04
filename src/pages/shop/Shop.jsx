@@ -2,12 +2,14 @@
 /* eslint-disable react/prop-types */
 import "./Shop.css";
 import Sidebar from "./Sidebar/Sidebar";
-import { products } from "../../components/home-compo/Products/ProductsDB";
 import { useState } from "react";
 import ProductCard from "../../components/home-compo/product-card/ProductCard";
 import Recommended from "./Recommended/Recommended";
+import { useLoaderData } from "react-router-dom";
 
 const Shop = () => {
+  const products = useLoaderData();
+
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   // ----------- Input Filter -----------

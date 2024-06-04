@@ -9,13 +9,13 @@ const Recommended = ({ handleClick }) => {
         <h2 className="recommended-title">Recommended</h2>
         <div className="recommended-flex">
           <Button onClickHandler={handleClick} value="" title="All Products" />
-          <Button onClickHandler={handleClick} value="apple" title="Apple" />
+          <Button onClickHandler={handleClick} value="Apple" title="Apple" />
           <Button
             onClickHandler={handleClick}
-            value="microsoft"
+            value="Microsoft"
             title="Microsoft"
           />
-          <Button onClickHandler={handleClick} value="amazon" title="Amazon" />
+          <Button onClickHandler={handleClick} value="Amazon" title="Amazon" />
         </div>
       </div>
     </>
