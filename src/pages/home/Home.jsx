@@ -2,8 +2,10 @@ import SwiperSlider from "../../components/home-compo/SwiperSlider";
 import headphone from "../../assets/images/banner/banner3.png";
 import watch from "../../assets/images/banner/banner4.png";
 import "./Home.css";
-import Advantage from "../../components/home-compo/Advantage/Advantage";
 import TopCategories from "../../components/home-compo/top-categories/TopCategories";
+import Advantage from "../../components/home-compo/advantage/Advantage";
+import Products from "../../components/home-compo/Products/Products";
+
 const Home = () => {
   return (
     <div className="lg:container px-5  md:mx-auto">
@@ -35,6 +37,7 @@ const Home = () => {
         </div>
       </div>
       <Advantage />
+      <Products />
       <TopCategories />
     </div>
   );
