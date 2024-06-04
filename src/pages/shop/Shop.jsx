@@ -13,9 +13,9 @@ const Shop = () => {
   // ----------- Input Filter -----------
   const [query, setQuery] = useState("");
 
-  const handleInputChange = (event) => {
-    setQuery(event.target.value);
-  };
+  // const handleInputChange = (event) => {
+  //   setQuery(event.target.value);
+  // };
 
   const filteredItems = products.filter(
     (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
@@ -57,9 +57,8 @@ const Shop = () => {
 
   return (
     <div className="lg:container px-5 mt-4   md:mx-auto">
-      <div>
-        <Recommended handleClick={handleClick} />
-      </div>
+      <Recommended handleClick={handleClick} />
+
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-12">
         <div className=" col-span-4 md:col-span-3">
           <Sidebar handleChange={handleChange} />
