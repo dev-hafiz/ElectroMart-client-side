@@ -97,7 +97,7 @@ const useFirebase = () => {
         const user = result.user;
         navigate(from, { replace: true });
         setUser(user);
-        toast.success("Account Created Successfully!");
+        toast.success("User Login Successfully!");
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -128,6 +128,8 @@ const useFirebase = () => {
       //   localStorage.removeItem("access-token");
       //   setLoading(false);
       // }
+      //*it will be deletet when onauth funtion complete
+      setLoading(false);
     });
     return () => unSubscribe();
   });
