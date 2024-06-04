@@ -2,15 +2,26 @@ import "./Login.css";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Login = () => {
+  const { signInWithGoogle, user } = useAuth();
+  console.log("User From Login -->", user);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+  };
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle(location, navigate);
   };
 
   return (
@@ -31,7 +42,7 @@ const Login = () => {
             <h3 className="recomend-text">We recommmend</h3>
             <span className="sub-text">Happy! shopping and deal with us</span>
             <div className="mt-4 mb-10">
-              <button className="social-btn-login">
+              <button onClick={handleGoogleLogin} className="social-btn-login">
                 <FaGoogle className="fa-btn-login" />
                 <span className="btn-text-login">Sign In By Google</span>
               </button>

@@ -3,8 +3,10 @@ import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineNotListedLocation } from "react-icons/md";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import useAuth from "../../../../hooks/useAuth";
 
 const Topbar = () => {
+  const { user, logOut } = useAuth();
   return (
     <div className="topbar-wrapper">
       <div className="topbar lg:container px-5 md:mx-auto grid md:grid-cols-3 gap-4">
@@ -19,9 +21,19 @@ const Topbar = () => {
             <MdOutlineNotListedLocation /> <span>Need Help</span>
           </div>
           <div>
-            <Link to="/login" className="icon-box">
-              <AiOutlineUser /> <span>Sign In / Register</span>
-            </Link>
+            {user?.uid ? (
+              <>
+                <button onClick={logOut} className="logout-btn">
+                  Log Out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link to="/login" className="icon-box">
+                  <AiOutlineUser /> <span>Sign In / Register</span>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>
