@@ -36,7 +36,7 @@ Effortlessly Shop the Latest Trends and Exclusive Deals: Seamless Online Shoppin
 
 Cutting-Edge Technologies for E-Commerce Excellence: Fast, Secure, and Scalable Solutions Powering User and Admin Experiences with Seamless Efficiency
 
-| Frontend | Backend |
+| Frontend | Documentation Guide |
 | ------ | ------ |
 | React | https://vitejs.dev/guide/|
 | React router | https://reactrouter.com/ |
