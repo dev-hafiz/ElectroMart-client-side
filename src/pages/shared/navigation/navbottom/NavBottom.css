@@ -1,7 +1,11 @@
 .nav-wrapper{
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
-  height: 60px;
+  background: #207AF4;
+  color: #fff;
+  height: auto;
+  padding: 10px 0;
+  margin-bottom: 30px;
 }
 .link-btn{
   margin: 0px 10px;
@@ -11,7 +15,6 @@
 .flw-text{
   font-size: 15px;
   font-weight: 600;
-  color: #081828;
   margin-right: 16px;
   margin-left: 16px;
 }

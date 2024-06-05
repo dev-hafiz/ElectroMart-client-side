@@ -28,7 +28,7 @@ const AddProduct = () => {
     };
     console.log(data);
 
-    await fetch("http://localhost:5000/products", {
+    await fetch("https://electro-mart-server-side.vercel.app/products", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

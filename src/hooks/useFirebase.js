@@ -114,12 +114,12 @@ const useFirebase = () => {
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-
+      // setLoading(false);
       //set and get token
       if (currentUser) {
         //Axios Post
         axios
-          .post(`http://localhost:5000/jwt`, {
+          .post(`https://electro-mart-server-side.vercel.app/jwt`, {
             email: currentUser.email,
           })
           .then((data) => {
@@ -153,7 +153,7 @@ const useFirebase = () => {
   const saveUserInDb = (email, displayName, method) => {
     console.log("name log", displayName);
     const user = { email, displayName };
-    fetch("http://localhost:5000/users", {
+    fetch("https://electro-mart-server-side.vercel.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",

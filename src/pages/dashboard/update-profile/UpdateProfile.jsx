@@ -10,7 +10,7 @@ const UpdateProfile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user?.email}`)
+    fetch(`https://electro-mart-server-side.vercel.app/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUpdateUser(data);
@@ -38,13 +38,16 @@ const UpdateProfile = () => {
       photoUrl,
     };
 
-    await fetch(`http://localhost:5000/users/${updateUser._id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(userData),
-    })
+    await fetch(
+      `https://electro-mart-server-side.vercel.app/users/${updateUser._id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         Swal.fire({

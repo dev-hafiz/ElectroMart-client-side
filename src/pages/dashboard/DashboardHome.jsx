@@ -10,7 +10,7 @@ const Dashboard = () => {
   // console.log(userInfo);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user?.email}`, {
+    fetch(`https://electro-mart-server-side.vercel.app/users/${user?.email}`, {
       headers: { authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
