@@ -12,6 +12,7 @@ import {
 } from "firebase/auth";
 import initializeAuthentication from "../firebase/firebase.init";
 import toast from "react-hot-toast";
+import axios from "axios";
 // import axios from "axios";
 
 initializeAuthentication();
@@ -115,22 +116,23 @@ const useFirebase = () => {
       setUser(currentUser);
 
       //set and get token
-      // if (currentUser) {
-      //   //Axios Post
-      //   axios
-      //     .post(`https://localhost500/jwt`, {
-      //       email: currentUser.email,
-      //     })
-      //     .then((data) => {
-      //       localStorage.setItem("access-token", data.data.token);
-      //       setLoading(false);
-      //     });
-      // } else {
-      //   localStorage.removeItem("access-token");
-      //   setLoading(false);
-      // }
-      //*it will be deletet when onauth funtion complete
-      setLoading(false);
+      if (currentUser) {
+        //Axios Post
+        axios
+          .post(`http://localhost:5000/jwt`, {
+            email: currentUser.email,
+          })
+          .then((data) => {
+            // console.log(data);
+            localStorage.setItem("access-token", data.data.token);
+            setLoading(false);
+          });
+      } else {
+        localStorage.removeItem("access-token");
+        setLoading(false);
+      }
+      //it will be deletet when onauth funtion complete
+      // setLoading(false);
     });
     return () => unSubscribe();
   });

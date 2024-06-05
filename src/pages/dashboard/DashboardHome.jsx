@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { Link } from "react-router-dom";
@@ -5,10 +6,13 @@ import { Link } from "react-router-dom";
 const Dashboard = () => {
   const { user } = useAuth();
   const [userInfo, setUserInfo] = useState({});
+  const token = localStorage.getItem("access-token");
   // console.log(userInfo);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user?.email}`)
+    fetch(`http://localhost:5000/users/${user?.email}`, {
+      headers: { authorization: `Bearer ${token}` },
+    })
       .then((res) => res.json())
       .then((data) => {
         setUserInfo(data);
