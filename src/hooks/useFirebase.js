@@ -34,7 +34,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         //Save user Info in database
-        // saveUserInDb(user?.email, user?.displayName, "POST");
+        saveUserInDb(user?.email, user?.displayName, "PUT");
         navigate(from, { replace: true });
         setUser(user);
         toast.success("Account Created Successfully!");
@@ -62,11 +62,12 @@ const useFirebase = () => {
     createUserWithEmailAndPassword(auth, email, password, name, photoUrl)
       .then((result) => {
         const user = result.user;
-        //Save user Info in database
-        // saveUserInDb(user?.email, user?.displayName, "POST");
+        // Save user Info in database
+        saveUserInDb(email, name, "POST");
         navigate(from, { replace: true });
         updateUserProfile(name, photoUrl);
         setUser(user);
+
         toast.success("Account Created Successfully!");
       })
       .catch((error) => {
@@ -147,18 +148,19 @@ const useFirebase = () => {
   };
 
   //Save User To Database
-  // const saveUserInDb = (email, displayName, method) => {
-  //   const user = { email, displayName };
-  //   fetch("https:localhost500/users", {
-  //     method: method,
-  //     headers: {
-  //       "content-type": "application/json",
-  //     },
-  //     body: JSON.stringify(user),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // };
+  const saveUserInDb = (email, displayName, method) => {
+    console.log("name log", displayName);
+    const user = { email, displayName };
+    fetch("http://localhost:5000/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
 
   return {
     user,
