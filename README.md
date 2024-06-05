@@ -3,7 +3,9 @@
 ## 𝐄𝐥𝐞𝐜𝐭𝐫𝐨-𝐌𝐚𝐫𝐭 𝐢𝐬 𝐚𝐧 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐖𝐞𝐛𝐬𝐢𝐭e 🛒🛍️🌐
 
 [![N|okshi](https://i.ibb.co/8NqcBxJ/Group-3.png)](https://nodesource.com/products/nsolid)
-[Visit Electro-Mart](https://electro-mart-app.web.app/)
+
+###### [Visit Electro-Mart](https://electro-mart-app.web.app/)
+
 
 Effortlessly Shop the Latest Trends and Exclusive Deals: Seamless Online Shopping Experience with Fast Delivery and Secure Payment Options!
 
@@ -39,7 +41,7 @@ Cutting-Edge Technologies for E-Commerce Excellence: Fast, Secure, and Scalable 
 | React | https://vitejs.dev/guide/|
 | React router | https://reactrouter.com/ |
 | Tailwind | https://tailwindcss.com/ |
-| Daysi-Ui | daisyui.com |
+| Daysi-Ui | https://daisyui.com/ |
 | Aos | https://www.npmjs.com/package/aos |
 | Hot toast | https://react-hot-toast.com/ |
 | Halmet | https://www.npmjs.com/package/react-helmet |
