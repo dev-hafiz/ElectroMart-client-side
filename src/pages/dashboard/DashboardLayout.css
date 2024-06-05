@@ -55,3 +55,27 @@ font-size: 30px;
 .btn-submit:hover{
   background: #121721;
 }
+
+.update-btn{
+  background: #4656DB;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6px;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+.update-btn:hover{
+  background: #2835ac;
+  transition: .3s linear;
+}
+
+.profile-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}

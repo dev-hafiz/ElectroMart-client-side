@@ -13,6 +13,7 @@ import AddProduct from "../pages/dashboard/add-product/AddProduct";
 import Dashboard from "../pages/dashboard/DashboardHome";
 import Shop from "../pages/shop/Shop";
 import EditProduct from "../pages/dashboard/edit-products/EditProduct";
+import UpdateProfile from "../pages/dashboard/update-profile/UpdateProfile";
 
 export const router = createBrowserRouter([
   {
@@ -88,6 +89,14 @@ export const router = createBrowserRouter([
           fetch(
             `https://electro-mart-server-side.vercel.app/products/${params.id}`
           ),
+      },
+      {
+        path: "allProduct/update/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
+          </PrivateRoute>
+        ),
       },
     ],
   },
